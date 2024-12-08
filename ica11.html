@@ -37,15 +37,43 @@
     </nav>
   </header>
 
+  <!-- This html file is completed with much help from Professor Christopher Kearl's videos -->
   <main>
     <section id="item-add-container">
       <!-- Grocery list item inputs go here -->
+       <div class="input-group">
+          <input type="text" class="form-control" id="item-name-input" placeholder="Grocery Item">
+       </div>
+
+       <div class="input-group">
+          <input type="number" class="form-control" id="item-quantity-input" placeholder="Quantity">
+       </div>
+
+       <div class="input-group">
+        <span class="input-group-text">$</span>
+          <input type="text" class="form-control" id="item-cost-input" placeholder="Cost">
+       </div>
+
+       <div class="input-group">
+          <select id="item-category-input" class="form-select">
+            <option value="Meats">Meats</option>
+            <option value="Produce">Produce</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Misc">Misc.</option>
+          </select>
+       </div>
+
+       <button type="button" class="btn btn-primary" id="add-item-button" onclick="addItem()">Add item</button>
     </section>
 
     <section id="list-container">
       <!-- UL for your grocery list -->
       <ul id="grocery-list"></ul>
       <!-- Quantity output, buy all and clear all bought buttons, and total price text go here -->
+       <p>Items left to buy: <span id="total-count">0</span>
+       </p>
+       <button id="check-all" type="button" onclick="toggleAllCheckboxes()" class="btn btn-primary">Check all</button>
+       <button id="buy-all-checked" type="button" onclick="clearCheckedItems()" class="btn btn-primary">Clear bought items</button>
     </section>
   </main>
 

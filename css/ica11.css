@@ -65,3 +65,15 @@ section button {
 .btn-30:hover {
   background-color: var(--ten) !important;
 }
+
+.red-over-budget {
+  color: red;
+}
+
+.orange-over-budget {
+  color: orange;
+}
+
+.yellow-over-budget {
+  color: yellow;
+}
